@@ -11,4 +11,8 @@ package application.view;
  */
 public class JavaFXViewImplementation {
     
+    
+    public void showGreeting(){
+        
+    }
 }

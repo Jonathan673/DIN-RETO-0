@@ -11,4 +11,8 @@ package application.model;
  */
 public class ModelBDImplementation {
     
+    
+    public void getGreeting(){
+        
+    }
 }

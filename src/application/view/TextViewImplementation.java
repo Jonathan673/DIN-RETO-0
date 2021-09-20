@@ -11,4 +11,8 @@ package application.view;
  */
 public class TextViewImplementation {
     
+    
+    public void showGreeting(){
+        
+    }
 }

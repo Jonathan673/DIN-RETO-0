@@ -11,4 +11,8 @@ package application.controller;
  */
 public class Controller {
     
+    
+    public void run(){
+        
+    }
 }
