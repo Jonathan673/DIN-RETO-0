@@ -9,7 +9,7 @@ package application.model;
  *
  * @author 2dam
  */
-public class FileModelImplementation {
+public class FileModelImplementation implements Model{
     
     
     public void getGreeting(){

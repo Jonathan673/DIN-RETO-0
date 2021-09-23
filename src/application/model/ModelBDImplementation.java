@@ -9,7 +9,7 @@ package application.model;
  *
  * @author 2dam
  */
-public class ModelBDImplementation {
+public class ModelBDImplementation implements Model{
     
     
     public void getGreeting(){
