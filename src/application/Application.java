@@ -5,6 +5,10 @@
  */
 package application;
 
+import application.model.ModelBDImplementation;
+import application.view.TextViewImplementation;
+import application.view.View;
+
 /**
  *
  * @author 2dam
@@ -16,6 +20,12 @@ public class Application {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+//        TextViewImplementation vista = new TextViewImplementation();
+//        vista.showGreeting();
+
+        ModelBDImplementation dbvista = new ModelBDImplementation();
+        dbvista.getGreeting();
         
     }
 }
