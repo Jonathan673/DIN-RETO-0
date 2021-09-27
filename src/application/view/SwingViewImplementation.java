@@ -19,6 +19,6 @@ public class SwingViewImplementation {
     public void showGreeting(){
         
         
-        JOptionPane.showMessageDialog(null, greetings.getString("saludo"));
+        JOptionPane.showMessageDialog(null, greetings.getString("saludoSwing"));
     }
 }

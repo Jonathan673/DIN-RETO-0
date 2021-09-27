@@ -12,7 +12,9 @@ package application.model;
 public class ModelFactory {
     
     
-    public void getModel(){
-        
+ /*   
+    public static Model getModel(){
+        return;
     }
+*/
 }

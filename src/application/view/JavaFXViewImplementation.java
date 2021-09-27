@@ -5,6 +5,7 @@
  */
 package application.view;
 
+import java.util.ResourceBundle;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.scene.Scene;
@@ -26,8 +27,12 @@ public class JavaFXViewImplementation extends Application{
     
     @Override
     public void start(Stage primaryStage) throws Exception {
+        
+        ResourceBundle greetings = ResourceBundle.getBundle("archives.greeting");
+        
+        
         Label lbl = new Label();
-        lbl.setText("Hola JavaFX");
+        lbl.setText(greetings.getString("saludoJavaFX"));
         
         StackPane root = new StackPane(); 
         root.getChildren().add(lbl);

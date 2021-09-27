@@ -71,8 +71,7 @@ public class ModelBDImplementation implements Model {
             rs = stmt.executeQuery();
             
             while(rs.next()){
-                saludo = rs.getString(1);
-                System.out.println(saludo);
+                System.out.println(saludo = rs.getString(1));
             }
             
             

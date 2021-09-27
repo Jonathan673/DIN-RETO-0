@@ -5,7 +5,10 @@
  */
 package application;
 
+import application.model.FileModelImplementation;
+import application.model.Model;
 import application.model.ModelBDImplementation;
+import application.model.ModelFactory;
 import application.view.JavaFXViewImplementation;
 import application.view.SwingViewImplementation;
 import application.view.TextViewImplementation;
@@ -25,15 +28,22 @@ public class Application {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        
+//        Model model = ModelFactory.getModel();
+        
+        
+        
+        
 //        TextViewImplementation vista = new TextViewImplementation();
 //        vista.showGreeting();
 
-//        ModelBDImplementation dbvista = new ModelBDImplementation();
-//        dbvista.getGreeting();
+        ModelBDImplementation dbvista = new ModelBDImplementation();
+        dbvista.getGreeting();
 //        SwingViewImplementation swingVista = new SwingViewImplementation();
 //        swingVista.showGreeting();
-        JavaFXViewImplementation fxVista = new JavaFXViewImplementation();
-        fxVista.showGreeting();
-        
+//        JavaFXViewImplementation fxVista = new JavaFXViewImplementation();
+//        fxVista.showGreeting();
+//        FileModelImplementation fileVista = new FileModelImplementation();
+//        fileVista.getGreeting();
     }
 }
