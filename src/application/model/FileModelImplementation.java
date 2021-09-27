@@ -11,18 +11,17 @@ import java.util.ResourceBundle;
  *
  * @author 2dam
  */
-public class FileModelImplementation implements Model{
-    
-    
+public class FileModelImplementation implements Model {
+
     private ResourceBundle greeting;
     private String hello;
-    
-    public  void getGreeting(){
 
-   
-           greeting = ResourceBundle.getBundle("archives.greeting");
-           
-           hello = greeting.getString("saludoFile");
-           System.out.println(hello);
+    public String getGreeting() {
+
+        greeting = ResourceBundle.getBundle("archives.greeting");
+
+        hello = greeting.getString("saludoFile");
+        System.out.println(hello);
+        return hello;
     }
 }

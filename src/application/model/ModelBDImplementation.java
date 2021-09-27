@@ -61,10 +61,10 @@ public class ModelBDImplementation implements Model {
 
     //metodo 
     @Override
-    public void getGreeting() {
+    public String getGreeting() {
         this.openConnection();
         ResultSet rs = null;
-        String saludo;
+        String saludo = null;
         try {
             stmt = (PreparedStatement) con.prepareStatement(saludar);
 
@@ -86,5 +86,6 @@ public class ModelBDImplementation implements Model {
             System.out.println("error al cerrar la connection");
             e.printStackTrace();
         }
+        return saludo;
     }
 }

@@ -12,5 +12,5 @@ package application.model;
 public interface Model {
     
     
-    public void getGreeting();
+    public String getGreeting();
 }

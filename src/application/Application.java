@@ -5,6 +5,7 @@
  */
 package application;
 
+import application.controller.Controller;
 import application.model.FileModelImplementation;
 import application.model.Model;
 import application.model.ModelBDImplementation;
@@ -13,6 +14,7 @@ import application.view.JavaFXViewImplementation;
 import application.view.SwingViewImplementation;
 import application.view.TextViewImplementation;
 import application.view.View;
+import application.view.ViewFactory;
 import static javafx.application.Application.launch;
 import javafx.stage.Stage;
 
@@ -28,17 +30,19 @@ public class Application {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        ViewFactory vFactory = new ViewFactory();
+        ModelFactory mFactory = new ModelFactory();
         
-//        Model model = ModelFactory.getModel();
-        
+        Controller control = new Controller();
+        control.run(vFactory.getView(), mFactory.getModel());
         
         
         
 //        TextViewImplementation vista = new TextViewImplementation();
 //        vista.showGreeting();
 
-        ModelBDImplementation dbvista = new ModelBDImplementation();
-        dbvista.getGreeting();
+//        ModelBDImplementation dbvista = new ModelBDImplementation();
+//        dbvista.getGreeting();
 //        SwingViewImplementation swingVista = new SwingViewImplementation();
 //        swingVista.showGreeting();
 //        JavaFXViewImplementation fxVista = new JavaFXViewImplementation();

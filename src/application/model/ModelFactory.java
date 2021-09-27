@@ -5,16 +5,28 @@
  */
 package application.model;
 
+import java.util.ResourceBundle;
+
 /**
  *
  * @author 2dam
  */
 public class ModelFactory {
     
-    
- /*   
-    public static Model getModel(){
-        return;
+    ResourceBundle modelo = ResourceBundle.getBundle("archives.configLoader");
+  
+    public Model getModel(){
+        String tipoModel = modelo.getString("type");
+        switch(tipoModel){
+            case "FileModelImplementation":
+                return new FileModelImplementation();
+            case "ModelBDImplementation":
+                return new FileModelImplementation();
+            default:
+                System.out.println("Error, dato no valido");
+        
+        }
+        return 
     }
-*/
+
 }
