@@ -5,14 +5,44 @@
  */
 package application.view;
 
+import javafx.application.Application;
+import static javafx.application.Application.launch;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
 /**
  *
- * @author 2dam
+ * @author Jonathan
  */
-public class JavaFXViewImplementation {
+public class JavaFXViewImplementation extends Application{
+    /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+    //metodo con el cual pintaremos la ventana y el mensaje hola JavaFX
     
-    
-    public void showGreeting(){
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Label lbl = new Label();
+        lbl.setText("Hola JavaFX");
         
+        StackPane root = new StackPane(); 
+        root.getChildren().add(lbl);
+        
+        Scene scene = new Scene(root, 300, 250);
+        
+        primaryStage.setTitle("Hola JavaFX");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
+    //metodo que lo ejecutará
+    public void showGreeting() {
+        String[] args = null;
+        launch(args);
+    } 
 }
+
+

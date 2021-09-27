@@ -5,14 +5,20 @@
  */
 package application.view;
 
+import java.util.ResourceBundle;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 2dam
  */
 public class SwingViewImplementation {
     
+    ResourceBundle greetings = ResourceBundle.getBundle("archives.greeting");
     
     public void showGreeting(){
         
+        
+        JOptionPane.showMessageDialog(null, greetings.getString("saludo"));
     }
 }

@@ -6,8 +6,12 @@
 package application;
 
 import application.model.ModelBDImplementation;
+import application.view.JavaFXViewImplementation;
+import application.view.SwingViewImplementation;
 import application.view.TextViewImplementation;
 import application.view.View;
+import static javafx.application.Application.launch;
+import javafx.stage.Stage;
 
 /**
  *
@@ -24,8 +28,12 @@ public class Application {
 //        TextViewImplementation vista = new TextViewImplementation();
 //        vista.showGreeting();
 
-        ModelBDImplementation dbvista = new ModelBDImplementation();
-        dbvista.getGreeting();
+//        ModelBDImplementation dbvista = new ModelBDImplementation();
+//        dbvista.getGreeting();
+//        SwingViewImplementation swingVista = new SwingViewImplementation();
+//        swingVista.showGreeting();
+        JavaFXViewImplementation fxVista = new JavaFXViewImplementation();
+        fxVista.showGreeting();
         
     }
 }
