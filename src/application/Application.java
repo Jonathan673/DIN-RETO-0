@@ -23,12 +23,12 @@ public class Application {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        ViewFactory vFactory = new ViewFactory();
-        ModelFactory mFactory = new ModelFactory();
+        ViewFactory viewFactory = new ViewFactory();
+        ModelFactory modelFactory = new ModelFactory();
         
         Controller control = new Controller();
         try {
-            control.run(mFactory.getModel(), vFactory.getView());
+            control.run(modelFactory.getModel(), viewFactory.getView());
         } catch (Exception ex) {
             Logger.getLogger(Application.class.getName()).log(Level.SEVERE, null, ex);
         }
