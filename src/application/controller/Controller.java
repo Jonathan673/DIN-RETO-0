@@ -5,14 +5,21 @@
  */
 package application.controller;
 
+import application.model.Model;
+import application.view.View;
+
 /**
  *
- * @author 2dam
+ * @author Alejandro
  */
 public class Controller {
     
     
-    public void run(){
+    public void run(Model model, View view)throws Exception{
+        String data;
+        data = model.getGreeting();
+        view.showGreeting(data);
+        
         
     }
 }

@@ -5,14 +5,23 @@
  */
 package application.model;
 
+import java.util.ResourceBundle;
+
 /**
  *
- * @author 2dam
+ * @author Alejandro
  */
-public class FileModelImplementation implements Model{
-    
-    
-    public void getGreeting(){
-        
+public class FileModelImplementation implements Model {
+
+    private ResourceBundle greeting;
+    private String hello;
+
+    public String getGreeting() {
+
+        greeting = ResourceBundle.getBundle("archives.greeting");
+
+        hello = greeting.getString("greetingFile");
+        System.out.println(hello);
+        return hello;
     }
 }

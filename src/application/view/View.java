@@ -7,10 +7,10 @@ package application.view;
 
 /**
  *
- * @author 2dam
+ * @author Alejandro
  */
 public interface View {
     
     
-    public void showGreeting();
+    public String showGreeting(String data);
 }

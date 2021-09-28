@@ -7,10 +7,10 @@ package application.model;
 
 /**
  *
- * @author 2dam
+ * @author Jonathan
  */
 public interface Model {
     
     
-    public void getGreeting();
+    public String getGreeting();
 }

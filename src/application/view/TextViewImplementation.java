@@ -5,21 +5,17 @@
  */
 package application.view;
 
-import java.util.ResourceBundle;
 
 /**
  *
- * @author 2dam
+ * @author Alejandro
  */
-public class TextViewImplementation {
-    
-    	// fichero config.properties
-	private ResourceBundle greetings;
-	private String sal;
-    
-    public void showGreeting(){
-        this.greetings = ResourceBundle.getBundle("archives.greeting");
-        sal = greetings.getString("saludo");
-        System.out.println(sal);
+public class TextViewImplementation implements View {
+
+    @Override
+    public String showGreeting(String data) {
+        return data;
+
     }
+
 }

@@ -5,13 +5,22 @@
  */
 package application;
 
+import application.controller.Controller;
+import application.model.FileModelImplementation;
+import application.model.Model;
 import application.model.ModelBDImplementation;
+import application.model.ModelFactory;
+import application.view.JavaFXViewImplementation;
+import application.view.SwingViewImplementation;
 import application.view.TextViewImplementation;
 import application.view.View;
+import application.view.ViewFactory;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
- * @author 2dam
+ * @author Alejandro
  */
 public class Application {
 
@@ -21,11 +30,14 @@ public class Application {
     public static void main(String[] args) {
         // TODO code application logic here
         
-//        TextViewImplementation vista = new TextViewImplementation();
-//        vista.showGreeting();
-
-        ModelBDImplementation dbvista = new ModelBDImplementation();
-        dbvista.getGreeting();
+        ViewFactory vFactory = new ViewFactory();
+        ModelFactory mFactory = new ModelFactory();
         
+        Controller control = new Controller();
+        try {
+            control.run(mFactory.getModel(), vFactory.getView());
+        } catch (Exception ex) {
+            Logger.getLogger(Application.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

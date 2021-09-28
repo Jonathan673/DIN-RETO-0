@@ -5,14 +5,41 @@
  */
 package application.view;
 
+import java.util.ResourceBundle;
+
 /**
  *
- * @author 2dam
+ * @author Alejandro
  */
 public class ViewFactory {
     
     
-    public void getView(){
-        
+ ResourceBundle modelo = ResourceBundle.getBundle("archives.configViewLoader");
+  
+    public View getView(){
+        String typeView = modelo.getString("typeView");
+        View vista  = null;
+        /*
+       switch (typeView) {
+           case  "TextViewImplementation":
+               vista = new TextViewImplementation();
+           case "SwingViewImplementation":
+               vista = new SwingViewImplementation();
+           case "JavaFXImplementation":
+               vista = new JavaFXViewImplementation();
+           default:
+               System.out.println("Error");
+       }
+*/
+       if(typeView.equalsIgnoreCase("TextViewImplementation")){
+           vista = new TextViewImplementation();
+       }else if(typeView.equalsIgnoreCase("SwingViewImplementation")){
+           vista = new SwingViewImplementation();
+       }else if(typeView.equalsIgnoreCase("JavaFXImplementation")){
+           vista = new JavaFXViewImplementation();
+       }else{
+           System.out.println("Error en la vista");
+       }
+        return vista;
     }
 }

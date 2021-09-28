@@ -5,14 +5,17 @@
  */
 package application.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author 2dam
+ * @author Jonathan
  */
-public class SwingViewImplementation {
+public class SwingViewImplementation implements View{
     
-    
-    public void showGreeting(){
-        
+    @Override
+    public String showGreeting(String data) {
+        JOptionPane.showMessageDialog(null, data);
+        return data;
     }
 }
