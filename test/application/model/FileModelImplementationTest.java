@@ -10,16 +10,17 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author 2dam
+ * @author Jonathan
  */
 public class FileModelImplementationTest {
     
-    public FileModelImplementationTest() {
-    }
 
     @Test
-    public void testSomeMethod() {
-        
+    public void testGetGreeting() {
+        FileModelImplementation fileTest = new FileModelImplementation();
+        String recibido = fileTest.getGreeting();
+        assertEquals("Hello from the file", recibido);
+        assertNotNull(fileTest);
     }
     
 }
