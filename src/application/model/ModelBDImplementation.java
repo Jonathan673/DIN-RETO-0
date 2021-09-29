@@ -72,7 +72,6 @@ public class ModelBDImplementation implements Model {
             
             while(rs.next()){
                 saludo = rs.getString(1);
-                System.out.println(saludo);
             }
             
             

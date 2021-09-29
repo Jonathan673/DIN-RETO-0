@@ -21,7 +21,6 @@ public class FileModelImplementation implements Model {
         greeting = ResourceBundle.getBundle("archives.greeting");
 
         hello = greeting.getString("greetingFile");
-        System.out.println(hello);
         return hello;
     }
 }
