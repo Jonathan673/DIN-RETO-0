@@ -16,6 +16,11 @@ public class ViewFactory {
     
  ResourceBundle modelo = ResourceBundle.getBundle("archives.configViewLoader");
   
+     /**
+     * Metodo el cual nos devolverá una implementacion de la vista
+     * en funcion de lo que tengamos escrito en nuestro configViewLoader.properties
+     * @return vista
+     */
     public View getView(){
         String typeView = modelo.getString("typeView");
         View vista  = null;
@@ -24,8 +29,6 @@ public class ViewFactory {
            vista = new TextViewImplementation();
        }else if(typeView.equalsIgnoreCase("SwingViewImplementation")){
            vista = new SwingViewImplementation();
-       }else if(typeView.equalsIgnoreCase("JavaFXImplementation")){
-           vista = new JavaFXViewImplementation();
        }else{
            System.out.println("Error en la vista");
        }

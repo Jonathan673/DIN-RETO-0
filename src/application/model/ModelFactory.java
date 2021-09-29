@@ -9,13 +9,18 @@ package application.model;
 import java.util.ResourceBundle;
 
 /**
- *
+ * 
  * @author Jonathan
  */
 public class ModelFactory {
 
     ResourceBundle modelo = ResourceBundle.getBundle("archives.configModelLoader");
 
+    /**
+     * Metodo el cual nos devolverá una implementacion u otra 
+     * en funcion de lo que tengamos escrito en nuestro configModelLoader.properties
+     * @return modelo
+     */
     public Model getModel() {
         String typeModel = modelo.getString("typeModel");
         Model modelo = null;

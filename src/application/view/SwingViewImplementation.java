@@ -13,6 +13,12 @@ import javax.swing.JOptionPane;
  */
 public class SwingViewImplementation implements View{
     
+    /**
+     * Metodo el cual se encargará de mostrar el mensaje recogido por pantalla
+     * mediante un JOptionPane
+     * @param data
+     * @return data
+     */
     @Override
     public String showGreeting(String data) {
         JOptionPane.showMessageDialog(null, data);

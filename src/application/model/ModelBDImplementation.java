@@ -61,6 +61,12 @@ public class ModelBDImplementation implements Model {
 
     //metodo 
 
+    /**
+     * Este metodo se encarga de coger el saludo de la base de datos
+     * @return
+     */
+
+    @Override
     public String getGreeting() {
         this.openConnection();
         ResultSet rs = null;

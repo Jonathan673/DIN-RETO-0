@@ -12,6 +12,11 @@ package application.view;
  */
 public class TextViewImplementation implements View {
 
+    /**
+     * Metodo que se encargará de mostrar el mensaje recogido por consola
+     * @param data
+     * @return data
+     */
     @Override
     public String showGreeting(String data) {
         System.out.println(data);
