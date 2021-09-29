@@ -1,4 +1,4 @@
 /*
- * En este paquete se encontrara la clase que iniciara el programa
+ * In this Package we will have the class that execute the program
  */
 package application;

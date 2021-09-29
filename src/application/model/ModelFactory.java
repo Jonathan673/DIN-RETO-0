@@ -5,9 +5,7 @@
  */
 package application.model;
 
-import application.view.JavaFXViewImplementation;
-import application.view.SwingViewImplementation;
-import application.view.TextViewImplementation;
+
 import java.util.ResourceBundle;
 
 /**
@@ -21,16 +19,7 @@ public class ModelFactory {
     public Model getModel() {
         String typeModel = modelo.getString("typeModel");
         Model modelo = null;
-        /*
-        switch(typeModel){
-            case "FileModelImplementation":
-                modelo = new FileModelImplementation();
-            case "ModelBDImplementation":
-                modelo = new ModelBDImplementation();
-            default:
-                System.out.println("Error, dato no valido");
-        }
-         */
+
         if (typeModel.equalsIgnoreCase("FileModelImplementation")) {
             modelo = new FileModelImplementation();
         } else if (typeModel.equalsIgnoreCase("ModelBDImplementation")) {

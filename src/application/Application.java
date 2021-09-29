@@ -6,14 +6,7 @@
 package application;
 
 import application.controller.Controller;
-import application.model.FileModelImplementation;
-import application.model.Model;
-import application.model.ModelBDImplementation;
 import application.model.ModelFactory;
-import application.view.JavaFXViewImplementation;
-import application.view.SwingViewImplementation;
-import application.view.TextViewImplementation;
-import application.view.View;
 import application.view.ViewFactory;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -19,18 +19,7 @@ public class ViewFactory {
     public View getView(){
         String typeView = modelo.getString("typeView");
         View vista  = null;
-        /*
-       switch (typeView) {
-           case  "TextViewImplementation":
-               vista = new TextViewImplementation();
-           case "SwingViewImplementation":
-               vista = new SwingViewImplementation();
-           case "JavaFXImplementation":
-               vista = new JavaFXViewImplementation();
-           default:
-               System.out.println("Error");
-       }
-*/
+
        if(typeView.equalsIgnoreCase("TextViewImplementation")){
            vista = new TextViewImplementation();
        }else if(typeView.equalsIgnoreCase("SwingViewImplementation")){
