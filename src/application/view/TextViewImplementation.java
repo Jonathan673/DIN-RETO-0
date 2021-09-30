@@ -1,21 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase encargada de mostrar el texto por consola
  */
 package application.view;
 
 
 /**
- *
- * @author Alejandro
+ * Clase la cual contiene el metodo showGreeting(), que posteriormente mostrara 
+ * el saludo por consola
+ * @author Alejandro Gomez
  */
 public class TextViewImplementation implements View {
 
+    /**
+     * Metodo que se encargara de mostrar el mensaje recogido por consola
+     * @param data que contendra el mensaje
+     */
     @Override
-    public String showGreeting(String data) {
+    public void showGreeting(String data) {
         System.out.println(data);
-        return data;
 
     }
 

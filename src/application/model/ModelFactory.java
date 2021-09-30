@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase encargada de implementar una clase concreta
  */
 package application.model;
 
@@ -9,25 +7,29 @@ package application.model;
 import java.util.ResourceBundle;
 
 /**
- *
- * @author Jonathan
+ * Clase la cual contiene el metodo getModel() que se encarga de hacer la 
+ * implementacion
+ * @author Jonathan Camacho
  */
 public class ModelFactory {
-
-    ResourceBundle modelo = ResourceBundle.getBundle("archives.configModelLoader");
-
+    /**
+     * Metodo el cual nos devolverá una implementacion u otra 
+     * en funcion de lo que tengamos escrito en nuestro configModelLoader.properties
+     * @return que es el tipo de modelo a elegir
+     */
     public Model getModel() {
+        ResourceBundle modelo = ResourceBundle.getBundle("archives.configModelLoader");
         String typeModel = modelo.getString("typeModel");
-        Model modelo = null;
+        Model model = null;
 
         if (typeModel.equalsIgnoreCase("FileModelImplementation")) {
-            modelo = new FileModelImplementation();
-        } else if (typeModel.equalsIgnoreCase("ModelBDImplementation")) {
-            modelo = new ModelBDImplementation();
+            model = new FileModelImplementation();
+        } else if (typeModel.equalsIgnoreCase("ModelDBImplementation")) {
+            model = new ModelDBImplementation();
         } else {
             System.out.println("Error en el modelo");
         }
-        return modelo;
+        return model;
     }
 
 }

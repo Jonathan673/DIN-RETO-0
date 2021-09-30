@@ -1,16 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase que especifica el metodo a ejecutar de la view
  */
 package application.view;
 
 /**
  *
- * @author Alejandro
+ * @author Alejandro Gomez
  */
 public interface View {
     
     
-    public String showGreeting(String data);
+    public void showGreeting(String data);
 }

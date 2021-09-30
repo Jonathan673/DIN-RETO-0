@@ -1,28 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase encargada del testeo de la clase ModelFactory
  */
 package application.model;
 
-import java.util.Collection;
+import java.util.ResourceBundle;
 import org.junit.Test;
 import static org.junit.Assert.*;
+
 /**
  *
- * @author Alejandro
+ * @author Alejandro Gomez
  */
 public class ModelFactoryTest {
+    
+/**
+ * Test del metodo getModel de la clase ModelFactory
+ */
 
-    /**
-     * Test of getModel method, of class ModelFactory.
-     */
     @Test
     public void testGetModel() {
-       // Collection<ModelFactory> dynamicTestsWithCollection();
-    //   ModelFactory testModelFactory = new ModelFactory();
-      //  String realType = testModelFactory.getModel();
-        //assertEquals("FileModelImplemenation", realType);
+        ResourceBundle modeloBundle = ResourceBundle.getBundle("archives.configModelLoader");
+        String typeModel = modeloBundle.getString("typeModel");
+        
+        ModelFactory modelF = new ModelFactory();
+        Model modelo = modelF.getModel();
+        
+        if (typeModel.equalsIgnoreCase("FileModelImplementation")) {
+            assertEquals( modelo.getClass(), FileModelImplementation.class ); 
+        } else if (typeModel.equalsIgnoreCase("ModelDBImplementation")) {
+            assertEquals( modelo.getClass(), ModelDBImplementation.class ); 
+        } else {
+            fail("Tipo de modelo desconocido"); 
+        }
+        
+        
     }
     
 }
