@@ -12,7 +12,6 @@ import java.util.ResourceBundle;
  */
 public class ViewFactory {
     
-    
  ResourceBundle modelo = ResourceBundle.getBundle("archives.configViewLoader");
   
      /**

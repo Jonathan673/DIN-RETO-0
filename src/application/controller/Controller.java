@@ -23,7 +23,5 @@ public class Controller {
         String data;
         data = model.getGreeting();
         view.showGreeting(data);
-        
-        
     }
 }
