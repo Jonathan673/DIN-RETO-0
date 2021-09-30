@@ -19,9 +19,7 @@ public class FileModelImplementation implements Model {
     public String getGreeting() {
 
         greeting = ResourceBundle.getBundle("archives.greeting");
-
-        hello = greeting.getString("saludoFile");
-        System.out.println(hello);
+        hello = greeting.getString("greetingFile");
         return hello;
     }
 }

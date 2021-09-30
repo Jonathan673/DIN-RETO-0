@@ -5,6 +5,7 @@
  */
 package application.model;
 
+
 import java.util.ResourceBundle;
 
 /**
@@ -12,21 +13,21 @@ import java.util.ResourceBundle;
  * @author Jonathan
  */
 public class ModelFactory {
-    
-    ResourceBundle modelo = ResourceBundle.getBundle("archives.configLoader");
-  
-    public Model getModel(){
+
+    ResourceBundle modelo = ResourceBundle.getBundle("archives.configModelLoader");
+
+    public Model getModel() {
         String typeModel = modelo.getString("typeModel");
-        Model modelo = null; 
-        switch(typeModel){
-            case "FileModelImplementation":
-                modelo = new FileModelImplementation();
-            case "ModelBDImplementation":
-                modelo = new ModelDBImplementation();
-            default:
-                System.out.println("Error, dato no valido");
+        Model modelo = null;
+
+        if (typeModel.equalsIgnoreCase("FileModelImplementation")) {
+            modelo = new FileModelImplementation();
+        } else if (typeModel.equalsIgnoreCase("ModelBDImplementation")) {
+            modelo = new ModelBDImplementation();
+        } else {
+            System.out.println("Error en el modelo");
         }
-        return modelo; 
+        return modelo;
     }
 
 }

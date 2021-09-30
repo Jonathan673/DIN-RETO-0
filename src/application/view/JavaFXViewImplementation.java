@@ -6,8 +6,6 @@
 package application.view;
 
 import java.util.ResourceBundle;
-import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
@@ -24,6 +22,7 @@ public class JavaFXViewImplementation implements View{
  * and open the template in the editor.
  */
     //metodo con el cual pintaremos la ventana y el mensaje hola JavaFX
+    
     
     public void start(Stage primaryStage) throws Exception{
         
