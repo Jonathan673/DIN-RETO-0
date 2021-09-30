@@ -1,4 +1,4 @@
-/*
- * In this Package we will have the class that execute the program
+/**
+ * Este paquete contendra la clase que ejecutara la aplicacion
  */
 package application;

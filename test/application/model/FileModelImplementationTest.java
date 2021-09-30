@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase encargada del testeo de la clase FileModelImplementation
  */
 package application.model;
 
@@ -10,11 +8,13 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Jonathan
+ * @author Jonathan Camacho
  */
 public class FileModelImplementationTest {
     
-
+/**
+ * Test del metodo getGreeting de la clase FileModelImplementation
+ */
     @Test
     public void testGetGreeting() {
         FileModelImplementation fileTest = new FileModelImplementation();

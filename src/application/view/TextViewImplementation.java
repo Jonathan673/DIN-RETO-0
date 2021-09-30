@@ -1,20 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase encargada de mostrar el texto por consola
  */
 package application.view;
 
 
 /**
  *
- * @author Alejandro
+ * @author Alejandro Gomez
  */
 public class TextViewImplementation implements View {
 
     /**
-     * Metodo que se encargará de mostrar el mensaje recogido por consola
-     * @param data
+     * Metodo que se encargara de mostrar el mensaje recogido por consola
+     * @param data que contendra el mensaje
      * @return data
      */
     @Override

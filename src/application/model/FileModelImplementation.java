@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase encargada de recoger el saludo de un fichero
  */
 package application.model;
 
@@ -9,7 +7,7 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author Alejandro
+ * @author Alejandro Gomez
  */
 public class FileModelImplementation implements Model {
 
@@ -24,7 +22,6 @@ public class FileModelImplementation implements Model {
     public String getGreeting() {
 
         greeting = ResourceBundle.getBundle("archives.greeting");
-
         hello = greeting.getString("greetingFile");
         return hello;
     }

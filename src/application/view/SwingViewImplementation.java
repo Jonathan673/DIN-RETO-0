@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase encargada de mostrar el texto por pantalla mediante el Swing
  */
 package application.view;
 
@@ -9,14 +7,14 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Jonathan
+ * @author Jonathan Camacho
  */
 public class SwingViewImplementation implements View{
     
     /**
      * Metodo el cual se encargará de mostrar el mensaje recogido por pantalla
      * mediante un JOptionPane
-     * @param data
+     * @param data que contendra el mensaje
      * @return data
      */
     @Override

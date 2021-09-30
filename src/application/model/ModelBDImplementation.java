@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase encargada de recoger el saludo de la base de datos
  */
 package application.model;
 
@@ -14,7 +12,8 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author Jonathan
+ * @author Jonathan Camacho
+ * 
  */
 public class ModelBDImplementation implements Model {
 
@@ -62,8 +61,8 @@ public class ModelBDImplementation implements Model {
     //metodo 
 
     /**
-     * Este metodo se encarga de coger el saludo de la base de datos
-     * @return
+     * Este metodo se encarga de recoger el saludo de la base de datos
+     * @return saludo
      */
 
     @Override

@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Clase encargada de implementar una clase concreta
  */
 package application.view;
 
@@ -9,7 +7,7 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author Alejandro
+ * @author Alejandro Gomez
  */
 public class ViewFactory {
     
@@ -19,7 +17,7 @@ public class ViewFactory {
      /**
      * Metodo el cual nos devolverá una implementacion de la vista
      * en funcion de lo que tengamos escrito en nuestro configViewLoader.properties
-     * @return vista
+     * @return que es el tipo de vista elegida
      */
     public View getView(){
         String typeView = modelo.getString("typeView");
