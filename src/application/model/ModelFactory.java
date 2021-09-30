@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
  */
 public class ModelFactory {
 
-    ResourceBundle modelo = ResourceBundle.getBundle("archives.configModelLoader");
+    
 
     /**
      * Metodo el cual nos devolverá una implementacion u otra 
@@ -22,17 +22,18 @@ public class ModelFactory {
      * @return modelo
      */
     public Model getModel() {
+        ResourceBundle modelo = ResourceBundle.getBundle("archives.configModelLoader");
         String typeModel = modelo.getString("typeModel");
-        Model modelo = null;
+        Model model = null;
 
         if (typeModel.equalsIgnoreCase("FileModelImplementation")) {
-            modelo = new FileModelImplementation();
+            model = new FileModelImplementation();
         } else if (typeModel.equalsIgnoreCase("ModelBDImplementation")) {
-            modelo = new ModelBDImplementation();
+            model = new ModelBDImplementation();
         } else {
             System.out.println("Error en el modelo");
         }
-        return modelo;
+        return model;
     }
 
 }
