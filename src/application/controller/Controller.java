@@ -7,7 +7,7 @@ import application.model.Model;
 import application.view.View;
 
 /**
- *
+ * Clase la cual implementara el metodo run()
  * @author Alejandro Gomez
  */
 public class Controller {

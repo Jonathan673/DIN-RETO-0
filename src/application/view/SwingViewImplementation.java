@@ -6,7 +6,8 @@ package application.view;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Clase la cual contiene el metodo showGreeting(), que posteriormente mostrara 
+ * el saludo por Swing
  * @author Jonathan Camacho
  */
 public class SwingViewImplementation implements View{

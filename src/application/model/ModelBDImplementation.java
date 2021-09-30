@@ -11,9 +11,9 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
- *
+ * Clase la cual contendra el metodo getGreeting() que recogera
+ * el saludo a partir de la base de datos
  * @author Jonathan Camacho
- * 
  */
 public class ModelBDImplementation implements Model {
 

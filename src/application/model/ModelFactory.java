@@ -7,7 +7,8 @@ package application.model;
 import java.util.ResourceBundle;
 
 /**
- * 
+ * Clase la cual contiene el metodo getModel() que se encarga de hacer la 
+ * implementacion
  * @author Jonathan Camacho
  */
 public class ModelFactory {

@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Clase la cual implementara el metodo main
  * @author Alejandro Gomez
  */
 public class Application {

@@ -6,7 +6,7 @@ package application.model;
 import java.util.ResourceBundle;
 
 /**
- *
+ * Clase la cual contendra el metodo getGreeting() que recogera el saludo
  * @author Alejandro Gomez
  */
 public class FileModelImplementation implements Model {

@@ -6,7 +6,8 @@ package application.view;
 import java.util.ResourceBundle;
 
 /**
- *
+ * Clase la cual contiene el metodo getView() que se encarga de hacer la 
+ * implementacion
  * @author Alejandro Gomez
  */
 public class ViewFactory {
