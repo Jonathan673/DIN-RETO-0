@@ -19,8 +19,7 @@ public class SwingViewImplementation implements View{
      * @return data
      */
     @Override
-    public String showGreeting(String data) {
+    public void showGreeting(String data) {
         JOptionPane.showMessageDialog(null, data);
-        return data;
     }
 }

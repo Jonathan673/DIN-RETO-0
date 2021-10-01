@@ -14,7 +14,6 @@ public class ViewFactory {
     
     
  ResourceBundle modelo = ResourceBundle.getBundle("archives.configViewLoader");
-  
      /**
      * Metodo el cual nos devolverá una implementacion de la vista
      * en funcion de lo que tengamos escrito en nuestro configViewLoader.properties

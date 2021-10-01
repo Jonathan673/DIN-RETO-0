@@ -10,5 +10,5 @@ package application.view;
 public interface View {
     
     
-    public String showGreeting(String data);
+    public void showGreeting(String data);
 }

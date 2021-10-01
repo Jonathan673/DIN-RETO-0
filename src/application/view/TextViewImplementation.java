@@ -17,9 +17,8 @@ public class TextViewImplementation implements View {
      * @return data
      */
     @Override
-    public String showGreeting(String data) {
+    public void showGreeting(String data) {
         System.out.println(data);
-        return data;
 
     }
 
