@@ -20,7 +20,6 @@ public class FileModelImplementation implements Model {
      */
     @Override
     public String getGreeting() {
-
         greeting = ResourceBundle.getBundle("archives.greeting");
         hello = greeting.getString("greetingFile");
         return hello;

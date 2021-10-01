@@ -9,6 +9,5 @@ package application.model;
  */
 public interface Model {
     
-    
     public String getGreeting();
 }

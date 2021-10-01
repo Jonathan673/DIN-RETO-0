@@ -16,7 +16,6 @@ public class SwingViewImplementation implements View{
      * Metodo el cual se encargará de mostrar el mensaje recogido por pantalla
      * mediante un JOptionPane
      * @param data que contendra el mensaje
-     * @return data
      */
     @Override
     public void showGreeting(String data) {

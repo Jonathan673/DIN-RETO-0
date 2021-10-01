@@ -3,6 +3,7 @@
  */
 package application.model;
 
+import java.util.ResourceBundle;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -18,9 +19,20 @@ public class ModelFactoryTest {
 
     @Test
     public void testGetModel() {
+        ResourceBundle modeloBundle = ResourceBundle.getBundle("archives.configModelLoader");
+        String typeModel = modeloBundle.getString("typeModel");
+        
         ModelFactory modelF = new ModelFactory();
-
-        assertNotNull(modelF);
+        Model modelo = modelF.getModel();
+        
+        if (typeModel.equalsIgnoreCase("FileModelImplementation")) {
+            assertEquals( modelo.getClass(), FileModelImplementation.class ); 
+        } else if (typeModel.equalsIgnoreCase("ModelDBImplementation")) {
+            assertEquals( modelo.getClass(), ModelDBImplementation.class ); 
+        } else {
+            fail("Tipo de modelo desconocido"); 
+        }
+        
         
     }
     

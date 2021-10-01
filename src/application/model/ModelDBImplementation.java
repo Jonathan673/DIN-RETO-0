@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
  * el saludo a partir de la base de datos
  * @author Jonathan Camacho
  */
-public class ModelBDImplementation implements Model {
+public class ModelDBImplementation implements Model {
 
     // fichero config.properties
     private ResourceBundle configFile;
@@ -27,11 +27,11 @@ public class ModelBDImplementation implements Model {
     private Connection con;
     private PreparedStatement stmt;
 
-    //sentencia sql
+    //Sentencia sql
     private final String saludar = "SELECT * from greeting";
 
     //conexion con la base de datos    
-    public ModelBDImplementation() {
+    public ModelDBImplementation() {
         this.configFile = ResourceBundle.getBundle("archives.config");
         this.driverBD = configFile.getString("driver");
         this.urlBD = configFile.getString("con");
@@ -41,9 +41,7 @@ public class ModelBDImplementation implements Model {
 
     private void openConnection() {
         try {
-
             con = (Connection) DriverManager.getConnection(this.urlBD, this.userBD, this.contraBD);
-
         } catch (SQLException e) {
             System.out.println("Error al intentar abrir la BD");
         }
@@ -72,19 +70,13 @@ public class ModelBDImplementation implements Model {
         String saludo = null;
         try {
             stmt = (PreparedStatement) con.prepareStatement(saludar);
-
             rs = stmt.executeQuery();
-            
             while(rs.next()){
                 saludo = rs.getString(1);
             }
-            
-            
-            
         } catch (SQLException e1) {
             e1.printStackTrace();
         }
-
         try {
             this.closeConnection();
         } catch (SQLException e) {

@@ -24,8 +24,8 @@ public class ModelFactory {
 
         if (typeModel.equalsIgnoreCase("FileModelImplementation")) {
             model = new FileModelImplementation();
-        } else if (typeModel.equalsIgnoreCase("ModelBDImplementation")) {
-            model = new ModelBDImplementation();
+        } else if (typeModel.equalsIgnoreCase("ModelDBImplementation")) {
+            model = new ModelDBImplementation();
         } else {
             System.out.println("Error en el modelo");
         }

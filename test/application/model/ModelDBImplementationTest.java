@@ -10,14 +10,14 @@ import static org.junit.Assert.*;
  *
  * @author Jonathan Camacho
  */
-public class ModelBDImplementationTest {
+public class ModelDBImplementationTest {
     
 /**
- * Test del metodo getGreeting de la clase ModelBDImplementation
+ * Test del metodo getGreeting de la clase ModelDBImplementation
  */
     @Test
     public void testGetGreeting() {
-        ModelBDImplementation fileTest = new ModelBDImplementation();
+        ModelDBImplementation fileTest = new ModelDBImplementation();
         String recibido = fileTest.getGreeting();
         assertEquals("Hola desde la base de datos", recibido);
     }
